@@ -7,7 +7,7 @@ python scraper.py
 
 The scraper can currently:
 
--Dump posts as raw JSON files to a new ./posts directory (if it doesn't already exist) in the following format:
+- Dump posts as raw JSON files to a new ./posts directory (if it doesn't already exist) in the following format:
 ```
 {"number": <post number>,
   "subject": <OP subject ('' if no subject in post)>,
@@ -18,9 +18,9 @@ The scraper can currently:
     ],
   "time": <UNIX timestamp of post>}
 ```
--Save posts to a local Postgres database, presumed to be running at port 5432
+- Save posts to a local Postgres database, presumed to be running at port 5432
 
--Save posts to a local MongoDB instance, presumed to be running at port 27017 unless otherwise specified
+- Save posts to a local MongoDB instance, presumed to be running at port 27017 unless otherwise specified
 
 ---
 
@@ -58,6 +58,7 @@ The posts will be stored in the same format as the raw JSON shown above. You may
 The python scripts in this repo require a sizeable number of packages. If an error occurs, simply install the relevant package and run again.
   
 In the future, this repository will contain a docker image containing all necessary dependencies for ease of use.
- 
+
+## Disclaimer
 The scraper requests warosu.org once per second and scrapes 20 threads per request. It's not advisable to increase the rate of requests, as you might get your IP blocked.
 If speed of data ingestion is an issue, consider running multiple instances of the scraper, each from a different IP address. If you don't know how to do this, you probably shouldn't be trying to make so many requests anyways.

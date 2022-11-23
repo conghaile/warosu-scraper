@@ -6,5 +6,5 @@ class Post():
         self.time = time
         
     def postDict(self):
-        post = {"number": self.number, "subject": self.subject, "text": self.subject, "time": self.time}
+        post = {"number": self.number, "subject": self.subject, "text": self.text, "time": self.time}
         return post

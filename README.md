@@ -19,6 +19,7 @@ The scraper can currently:
   "time": <UNIX timestamp of post>}
 ```
 -Save posts to a local Postgres database, presumed to be running at port 5432
+
 -Save posts to a local MongoDB instance, presumed to be running at port 27017 unless otherwise specified
 
 ---
@@ -45,12 +46,14 @@ python scraper.py [board] postgres [OPTIONAL:table name]
 
 If no table name is provided, the scraper will create a table called 'warosu' with the appropriate column names and types.
 If a table name is provided, the scraper expects four string columns in the table, `number, subject, text, time`, each with type set to VARCHAR.
+
 ---
 In order to save posts to a MongoDB instance, start the instance and then enter the following into the command line:
 ```
 python scraper.py [board] mongo [OPTIONAL:port]
 ```
 The posts will be stored in the same format as the raw JSON shown above. You may provide a port if your MongoDB instance isn't running at the default port (27017).
+
 ---
 The python scripts in this repo require a sizeable number of packages. If an error occurs, simply install the relevant package and run again.
   

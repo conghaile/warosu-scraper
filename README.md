@@ -6,6 +6,7 @@ python scraper.py
 ```
 
 The scraper can currently:
+
 -Dump posts as raw JSON files to a new ./posts directory (if it doesn't already exist) in the following format:
 ```
 {"number": <post number>,
@@ -19,6 +20,7 @@ The scraper can currently:
 ```
 -Save posts to a local Postgres database, presumed to be running at port 5432
 -Save posts to a local MongoDB instance, presumed to be running at port 27017 unless otherwise specified
+
 ---
 
 In order to dump raw JSON files, enter the following into the command line:
